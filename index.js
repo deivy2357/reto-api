@@ -17,7 +17,7 @@ sequelize
             console.log(`Server run at ${env.SERVER_PORT}`);
         });
     })
-    .catch(() => {
-        console.log(process.env.NODE_ENV, process.DB_HOST);
-        console.error("no se conectó a la base de datos");
+    .catch((err) => {
+        console.log(env.NODE_ENV, env.DB_HOST);
+        console.error("no se conectó a la base de datos", err);
     });
