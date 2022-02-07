@@ -18,5 +18,6 @@ sequelize
         });
     })
     .catch(() => {
+        console.log(process.env.NODE_ENV, process.DB_HOST);
         console.error("no se conectó a la base de datos");
     });
