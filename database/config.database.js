@@ -7,8 +7,12 @@ if (process.env.NODE_ENV == "production") {
         host: env.DB_HOST,
         port: env.DB_PORT,
         dialect: "postgres",
+        ssl: true,
         dialectOptions: {
-            ssl: true,
+            ssl: {
+                require: true, // This will help you. But you will see nwe error
+                rejectUnauthorized: false, // This line will fix new error
+            },
         },
     });
     module.exports = sequelize;
