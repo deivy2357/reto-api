@@ -17,6 +17,7 @@ const getAllClientes = async(req, res) => {
     }
 };
 
+// genera promedio
 const getPromedio = async(req, res) => {
     try {
         const records = await Cliente.sequelize.query(

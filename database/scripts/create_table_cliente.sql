@@ -1,3 +1,4 @@
+
 create table clientes
 (
     id               varchar(36)  not null
